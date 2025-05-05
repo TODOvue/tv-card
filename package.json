@@ -2,7 +2,7 @@
   "name": "@todovue/tvcard",
   "private": false,
   "author": "Cristhian Daza",
-  "description": "Component Card created for the TodoVue blog",
+  "description": "TvCard is a customizable and flexible card component for Vue 3 applications, ideal for showcasing content with a title, image, description, and action buttons. It supports additional elements like secondary buttons and labels for enhanced interactivity and visual structure.",
   "license": "MIT",
   "version": "1.0.1",
   "type": "module",
@@ -48,16 +48,18 @@
     "build:demo": "cp README.md public/ && VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
-    "@todovue/tvbutton": "^1.1.2",
-    "@todovue/tvlabel": "^1.0.2",
-    "vue": "^3.4.21"
+    "vue": "^3.0.0"
+  },
+  "dependencies": {
+    "@todovue/tv-button": "^1.0.0",
+    "@todovue/tv-label": "^1.0.0"
   },
   "devDependencies": {
-    "@todovue/tvdemo": "^1.3.2",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "sass": "^1.85.0",
-    "vite": "^5.2.0",
-    "vite-plugin-css-injected-by-js": "^3.5.2",
-    "vite-plugin-dts": "^4.5.0"
+    "@todovue/tv-demo": "^1.0.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "sass": "^1.0.0",
+    "vite": "^6.0.0",
+    "vite-plugin-css-injected-by-js": "^3.0.0",
+    "vite-plugin-dts": "^4.0.0"
   }
 }

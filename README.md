@@ -2,7 +2,7 @@
 </p>
 
 # TvCard
-###### The TvCard is a component that allows you to display a card with a title, a subtitle, a description, an image and a button.
+###### TvCard is a customizable and flexible card component for Vue 3 applications, ideal for showcasing content with a title, image, description, and action buttons. It supports additional elements like secondary buttons and labels for enhanced interactivity and visual structure.
 
 [![npm](https://img.shields.io/npm/v/@todovue/tvcard.svg)](https://www.npmjs.com/package/@todovue/tvcard) [![Netlify Status](https://api.netlify.com/api/v1/badges/cb4b8651-1062-4a0b-aa47-28437cbf9fdc/deploy-status)](https://app.netlify.com/sites/todovue-card/deploys) [![npm](https://img.shields.io/npm/dm/@todovue/tvcard.svg)](https://www.npmjs.com/package/@todovue/tvcard) [![npm](https://img.shields.io/npm/dt/@todovue/tvcard.svg)](https://www.npmjs.com/package/@todovue/tvcard) ![GitHub](https://img.shields.io/github/license/TODOvue/todovue-card) ![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/todovue-card)
 
