@@ -1,17 +1,17 @@
 {
-  "name": "@todovue/tvcard",
+  "name": "@todovue/tv-card",
   "private": false,
   "author": "Cristhian Daza",
   "description": "TvCard is a customizable and flexible card component for Vue 3 applications, ideal for showcasing content with a title, image, description, and action buttons. It supports additional elements like secondary buttons and labels for enhanced interactivity and visual structure.",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TODOvue/todovue-card.git"
+    "url": "https://github.com/TODOvue/tv-card.git"
   },
   "bugs": {
-    "url": "https://github.com/TODOvue/todovue-card/issues"
+    "url": "https://github.com/TODOvue/tv-card/issues"
   },
   "keywords": [
     "todovue",
@@ -27,13 +27,13 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/todovue-card.es.js",
-      "require": "./dist/todovue-card.cjs.js"
+      "import": "./dist/tv-card.es.js",
+      "require": "./dist/tv-card.cjs.js"
     }
   },
-  "main": "dist/todovue-card.cjs.js",
-  "module": "dist/todovue-card.es.js",
-  "types": "dist/todovue-card.d.ts",
+  "main": "dist/tv-card.cjs.js",
+  "module": "dist/tv-card.es.js",
+  "types": "dist/tv-card.d.ts",
   "files": [
     "dist",
     "LICENSE",

@@ -7,7 +7,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import TvCard from '@todovue/tvcard';
+import TvCard from '@todovue/tv-card';
 
 const configCard = ref({
   title: 'Create Vue.js',

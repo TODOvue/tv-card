@@ -1,6 +1,6 @@
 <script setup>
-import TvButton from "@todovue/tvbutton";
-import TvLabel from "@todovue/tvlabel";
+import TvButton from "@todovue/tv-button";
+import TvLabel from "@todovue/tv-label";
 import useCard from "../composable/useCard";
 
 const props = defineProps({

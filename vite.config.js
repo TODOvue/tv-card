@@ -22,7 +22,7 @@ export default defineConfig({
       lib: {
         entry: "src/components/TvCard.vue",
         name: "TvCard",
-        fileName: format => `todovue-card.${format}.js`,
+        fileName: format => `tv-card.${format}.js`,
         formats: ["es", "cjs"]
       },
       rollupOptions: {

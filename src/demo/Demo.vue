@@ -1,5 +1,5 @@
 <script setup>
-import TvDemo from '@todovue/tvdemo';
+import TvDemo from '@todovue/tv-demo';
 import { defineAsyncComponent } from 'vue';
 
 const TvCard = defineAsyncComponent(() => import('../components/TvCard.vue'));
@@ -12,9 +12,9 @@ import { demos } from "../utils/mocks.js";
     :variants="demos"
     hide-background
     name-component="TvCard"
-    npm-install="@todovue/tvcard"
-    source-link="https://github.com/TODOvue/todovue-card"
-    url-clone="https://github.com/TODOvue/todovue-card.git"
-    version="1.0.1"
+    npm-install="@todovue/tv-card"
+    source-link="https://github.com/TODOvue/tv-card"
+    url-clone="https://github.com/TODOvue/tv-card.git"
+    version="1.0.0"
   />
 </template>

@@ -161,6 +161,7 @@ export const demos = [
   {
     id: 1,
     title: "Default",
+    description: "Displays a basic card with a title, image, description, and a primary action button.",
     propsData: {
       configCard: {
         title: "Create Vue.js",
@@ -177,6 +178,7 @@ export const demos = [
   {
     id: 2,
     title: "With labels",
+    description: "Includes label chips below the card content to represent tags or categories.",
     propsData: {
       configCard: {
         title: "Write JavaScript",
@@ -194,6 +196,7 @@ export const demos = [
   {
     id: 3,
     title: "With two buttons",
+    description: "Adds a secondary action button alongside the primary button for more interactions.",
     propsData: {
       configCard: {
         title: "Design Web",
@@ -212,6 +215,7 @@ export const demos = [
   {
     id: 4,
     title: "With custom colors",
+    description: "Showcases how the card can be customized with different background and button colors.",
     propsData: {
       configCard: {
         title: "Write Vue.js",
@@ -236,6 +240,7 @@ export const demos = [
   {
     id: 5,
     title: "With multiple labels (default 3) with limitLabels",
+    description: "Demonstrates how the card handles many labels with a configurable label limit.",
     propsData: {
       configCard: {
         title: "Write JavaScript",
@@ -251,4 +256,4 @@ export const demos = [
     },
     html: WithMultipleLabels,
   },
-];
+];;
