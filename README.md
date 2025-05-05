@@ -2,40 +2,40 @@
 </p>
 
 # TvCard
-###### The TvCard is a component that allows you to display a card with a title, a subtitle, a description, an image and a button.
+###### TvCard is a customizable and flexible card component for Vue 3 applications, ideal for showcasing content with a title, image, description, and action buttons. It supports additional elements like secondary buttons and labels for enhanced interactivity and visual structure.
 
-[![npm](https://img.shields.io/npm/v/@todovue/tvcard.svg)](https://www.npmjs.com/package/@todovue/tvcard) [![Netlify Status](https://api.netlify.com/api/v1/badges/cb4b8651-1062-4a0b-aa47-28437cbf9fdc/deploy-status)](https://app.netlify.com/sites/todovue-card/deploys) [![npm](https://img.shields.io/npm/dm/@todovue/tvcard.svg)](https://www.npmjs.com/package/@todovue/tvcard) [![npm](https://img.shields.io/npm/dt/@todovue/tvcard.svg)](https://www.npmjs.com/package/@todovue/tvcard) ![GitHub](https://img.shields.io/github/license/TODOvue/todovue-card) ![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/todovue-card)
+[![npm](https://img.shields.io/npm/v/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card) [![Netlify Status](https://api.netlify.com/api/v1/badges/cb4b8651-1062-4a0b-aa47-28437cbf9fdc/deploy-status)](https://app.netlify.com/sites/tv-card/deploys) [![npm](https://img.shields.io/npm/dm/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card) [![npm](https://img.shields.io/npm/dt/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card) ![GitHub](https://img.shields.io/github/license/TODOvue/tv-card) ![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/tv-card)
 
 ## Table of Contents
-- [Demo](https://todovue-card.netlify.app/)
+- [Demo](https://tv-card.netlify.app/)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Props](#props)
 - [Events](#events)
 - [Customize](#customize)
 - [Development](#development)
-- [Changelog](https://github.com/TODOvue/todovue-card/blob/main/CHANGELOG.md)
-- [Contributing](https://github.com/TODOvue/todovue-card/blob/main/CONTRIBUTING.md)
-- [License](https://github.com/TODOvue/todovue-demo/card/main/LICENSE)
+- [Changelog](https://github.com/TODOvue/tv-card/blob/main/CHANGELOG.md)
+- [Contributing](https://github.com/TODOvue/tv-card/blob/main/CONTRIBUTING.md)
+- [License](https://github.com/TODOvue/tv-demo/card/main/LICENSE)
 
 ## Installation
 Install with npm or yarn
 ```bash
-npm install @todovue/tvcardd
+npm install @todovue/tv-card
 ```
 ```bash
-yarn add @todovue/tvcard
+yarn add @todovue/tv-card
 ```
 Import
 ```js
-import TvCard from '@todovue/tvcard'
+import TvCard from '@todovue/tv-card'
 ```
 
 You can also import it directly in the **main.js** file, so you don't have to import it in the pages
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
-import TvCard from "@todovue/tvcard"
+import TvCard from "@todovue/tv-card"
 
 const app = createApp(App);
 app.component("TvCard", TvCard);
@@ -52,7 +52,7 @@ app.mount("#app");
 
 <script setup>
 import { ref } from "vue";
-import TvCard from "@todovue/tvcard"
+import TvCard from "@todovue/tv-card"
 
 const configCard = ref({
   title: "Create Vue.js",
@@ -123,7 +123,7 @@ const configCard = ref({
 
 <script setup>
 import { ref } from "vue";
-import TvCard from "@todovue/tvcard"
+import TvCard from "@todovue/tv-card"
 
 const configCard = ref({
   title: "Create Vue.js",
@@ -146,10 +146,10 @@ const handleButton = () => {
 ## Development
 Clone the repository and install the dependencies
 ```bash
-git clone https://github.com/TODOvue/todovue-card.git
-cd todovue-card
+git clone https://github.com/TODOvue/tv-card.git
+cd tv-card
 yarn install
 ```
 ---
 ## License
-[MIT](https://github.com/TODOvue/todovue-card/blob/main/LICENSE)
+[MIT](https://github.com/TODOvue/tv-card/blob/main/LICENSE)
