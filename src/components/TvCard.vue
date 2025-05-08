@@ -15,8 +15,6 @@ const emit = defineEmits(["clickButton", "clickLabel", "clickSecondaryButton"]);
 const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(props, emit);
 </script>
 
-<style scoped lang="scss" src="../assets/scss/style.scss"></style>
-
 <template>
   <div class="tv-card-body" v-if="card">
     <div class="tv-card" :style="card.customStyleCard">
@@ -67,3 +65,6 @@ const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(pr
   </div>
 </template>
 
+<style lang="scss">
+  @use "../assets/scss/style.scss";
+</style>
