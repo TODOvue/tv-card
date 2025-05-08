@@ -1,5 +1,6 @@
 @use "mixins.scss";
 @use "variables.scss";
+@use "global.scss";
 
 %alignCenterFlex {
   align-items: center;
