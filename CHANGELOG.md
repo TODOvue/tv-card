@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.1] - 2025-05-07
+
+### 🐛 Fixed
+- Fixed styles and global style imports
+
 ## [1.0.0] - 2025-05-05
 ### ✨ Added
 - Initial release of `TvCard` component under the `@todovue` namespace.
@@ -21,4 +26,5 @@ This project adheres to [Semantic Versioning](https://semver.org/).
     - `clickSecondaryButton` (on secondary button click)
     - `clickLabel` (on label click)
 
+[1.0.1]: https://github.com/TODOvue/todovue-card/pull/4/files
 [1.0.0]: https://github.com/TODOvue/todovue-card/pull/3/files
