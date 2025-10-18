@@ -1,155 +1,319 @@
 <p align="center"><img width="150" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=d8eb592f-e4a9-4b02-8aff-62d337745f41" alt="TODOvue logo">
 </p>
 
-# TvCard
-###### TvCard is a customizable and flexible card component for Vue 3 applications, ideal for showcasing content with a title, image, description, and action buttons. It supports additional elements like secondary buttons and labels for enhanced interactivity and visual structure.
+# TODOvue Card (TvCard)
+A flexible and customizable Vue 3 card component for showcasing content with title, image, description, and action buttons. Perfect for Single Page Apps and Server-Side Rendered (SSR) environments like Nuxt 3.
 
-[![npm](https://img.shields.io/npm/v/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card) [![Netlify Status](https://api.netlify.com/api/v1/badges/cb4b8651-1062-4a0b-aa47-28437cbf9fdc/deploy-status)](https://app.netlify.com/sites/tv-card/deploys) [![npm](https://img.shields.io/npm/dm/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card) [![npm](https://img.shields.io/npm/dt/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card) ![GitHub](https://img.shields.io/github/license/TODOvue/tv-card) ![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/tv-card)
+[![npm](https://img.shields.io/npm/v/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card)
+[![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card)
+![License](https://img.shields.io/github/license/TODOvue/tv-card)
 
+> Demo: https://tv-card.netlify.app/
+
+---
 ## Table of Contents
-- [Demo](https://tv-card.netlify.app/)
+- [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Quick Start (SPA)](#quick-start-spa)
+- [Nuxt 3 / SSR Usage](#nuxt-3--ssr-usage)
+- [Component Registration Options](#component-registration-options)
 - [Props](#props)
 - [Events](#events)
-- [Customize](#customize)
+- [Customization (Styles / Theming)](#customization-styles--theming)
+- [Examples](#examples)
+- [Accessibility](#accessibility)
+- [SSR Notes](#ssr-notes)
+- [Roadmap](#roadmap)
 - [Development](#development)
-- [Changelog](https://github.com/TODOvue/tv-card/blob/main/CHANGELOG.md)
-- [Contributing](https://github.com/TODOvue/tv-card/blob/main/CONTRIBUTING.md)
-- [License](https://github.com/TODOvue/tv-demo/card/main/LICENSE)
+- [Contributing](#contributing)
+- [License](#license)
 
+---
+## Features
+- Clean and modern card layout with image, title, and description
+- Primary and secondary action buttons
+- Label/tag support with customizable limit
+- Fully customizable color scheme (background, text, button styles)
+- Click events for buttons and labels
+- Works seamlessly in SPA and SSR (Nuxt 3) contexts
+- Built on top of `@todovue/tv-button` and `@todovue/tv-label`
+- Tree-shake friendly (Vue marked external in library build)
+- TypeScript support
+
+---
 ## Installation
-Install with npm or yarn
+Using npm:
 ```bash
 npm install @todovue/tv-card
 ```
+Using yarn:
 ```bash
 yarn add @todovue/tv-card
 ```
-Import
-```js
-import TvCard from '@todovue/tv-card'
+Using pnpm:
+```bash
+pnpm add @todovue/tv-card
 ```
 
-You can also import it directly in the **main.js** file, so you don't have to import it in the pages
+---
+## Quick Start (SPA)
+Global registration (main.js / main.ts):
 ```js
-import { createApp } from "vue";
-import App from "./App.vue";
-import TvCard from "@todovue/tv-card"
+import { createApp } from 'vue'
+import App from './App.vue'
+import { TvCard } from '@todovue/tv-card'
 
-const app = createApp(App);
-app.component("TvCard", TvCard);
-app.mount("#app");
+createApp(App)
+  .use(TvCard) // enables <TvCard /> globally
+  .mount('#app')
 ```
-## Usage
-```html
-<template>
-  <tv-card
-    @click-button="handleButton"
-    :configCard="configCard"
-  />
-</template>
-
+Local import inside a component:
+```vue
 <script setup>
-import { ref } from "vue";
-import TvCard from "@todovue/tv-card"
+import { TvCard } from '@todovue/tv-card'
+import { ref } from 'vue'
 
 const configCard = ref({
-  title: "Create Vue.js",
-  description: "Vue.js (commonly known as Vue; pronounced /vjuː/...",
-  alt: "Card Image",
-  image: "https://todovue.com/vue.webp",
-  primaryButtonText: "View more",
-});
+  title: 'Create Vue.js',
+  description: 'Vue.js (commonly known as Vue; pronounced /vju/...',
+  alt: 'Card Image',
+  image: 'https://todovue.com/vue.webp',
+  primaryButtonText: 'View more',
+})
 
-const handleButton = () => {
-  console.log("Button clicked");
+function handleButton() {
+  console.log('Button clicked')
 }
+</script>
+
+<template>
+  <TvCard :configCard="configCard" @click-button="handleButton" />
+</template>
+```
+
+---
+## Nuxt 3 / SSR Usage
+Create a plugin file: `plugins/tv-card.client.ts` (client-only is fine, or without suffix for SSR as it is safe):
+```ts
+import { defineNuxtPlugin } from '#app'
+import { TvCard } from '@todovue/tv-card'
+
+export default defineNuxtPlugin(nuxtApp => {
+  nuxtApp.vueApp.use(TvCard)
+})
+```
+Use anywhere:
+```vue
+<template>
+  <TvCard :configCard="myConfig" @click-button="handleAction" />
+</template>
+```
+Optional direct import (no plugin):
+```vue
+<script setup>
+import { TvCard } from '@todovue/tv-card'
 </script>
 ```
 
+---
+## Component Registration Options
+| Approach                                                          | When to use                                    |
+|-------------------------------------------------------------------|------------------------------------------------|
+| Global via `app.use(TvCard)`                                      | Many usages across app / design system install |
+| Local named import `{ TvCard }`                                   | Isolated / code-split contexts                 |
+| Direct default import `import { TvCard } from '@todovue/tv-card'`     | Single usage or manual registration            |
+| Plugin import `{ TvCardPlugin }`                                  | Explicit plugin installation                   |
+
+---
 ## Props
-| Name       | Type   | Default                  | Description                        |
-|------------|--------|--------------------------|------------------------------------|
-| configCard | Object | [See below](#configcard) | Object with the card configuration |
+The component accepts a single prop `configCard` which is an object with the following structure:
 
-### configCard
-| Name                           | Type   | Default   | Description                                   | required |
-|--------------------------------|--------|-----------|-----------------------------------------------|----------|
-| title                          | String | `""`      | Card title                                    | `true`   |
-| description                    | String | `""`      | Card description                              | `true`   |
-| image                          | String | `""`      | Card image                                    | `true`   |
-| alt                            | String | `""`      | Card image alt                                | `true`   |
-| primaryButtonText              | String | `""`      | Card primary button text                      | `true`   |
-| secondaryButtonText            | String | `""`      | Card secondary button text                    | `false`  |
-| labels                         | Array  | `[]`      | Card labels                                   | `false`  |
-| limitLabels                    | Number | `3`       | Card limit labels                             | `false`  |
-| backgroundColor                | String | `#0E131F` | Card custom background color                  | `false`  |
-| color                          | String | `#AFDEDC` | Card custom color                             | `false`  |
-| backgroundButtonColor          | String | `#EF233C` | Card custom background primary button color   | `false`  |
-| buttonColor                    | String | `#F4FAFF` | Card custom primary button color              | `false`  |
-| backgroundButtonSecondaryColor | String | `#2F80ED` | Card custom background secondary button color | `false`  |
-| colorButtonSecondary           | String | `#F4FAFF` | Card custom secondary button color            | `false`  |
+| Property                         | Type     | Required | Default | Description                                      |
+|----------------------------------|----------|----------|---------|--------------------------------------------------|
+| title                            | string   | Yes      | -       | Card title text.                                 |
+| description                      | string   | Yes      | -       | Card description/content text.                   |
+| image                            | string   | Yes      | -       | URL of the card image.                           |
+| alt                              | string   | No       | ''      | Alt text for the image (accessibility).          |
+| primaryButtonText                | string   | Yes      | -       | Text for the primary action button.              |
+| secondaryButtonText              | string   | No       | -       | Text for the secondary action button (optional). |
+| labels                           | array    | No       | -       | Array of label objects `{id, name, color}`.      |
+| limitLabels                      | number   | No       | 3       | Maximum number of labels to display.             |
+| backgroundColor                  | string   | No       | -       | Custom background color for the card.            |
+| color                            | string   | No       | -       | Custom text color for the card.                  |
+| backgroundButtonColor            | string   | No       | -       | Custom background color for primary button.      |
+| colorButton                      | string   | No       | -       | Custom text color for primary button.            |
+| backgroundButtonSecondaryColor   | string   | No       | -       | Custom background color for secondary button.    |
+| colorButtonSecondary             | string   | No       | -       | Custom text color for secondary button.          |
 
-## Events
-| Name                 | Description                                                                    |
-|----------------------|--------------------------------------------------------------------------------|
-| clickButton          | Event emitted when the primary button is clicked, returns the button's value   |
-| clickSecondaryButton | Event emitted when the secondary button is clicked, returns the button's value |
-| clickLabel           | Event emitted when the label is clicked, returns the label's value             |
-
-## Customize
-You can customize the card by cardConfig, you can see the [props](#props) section to see the available options
-
+### Label Object Structure
 ```js
-const configCard = ref({
-  backgroundColor: "#000000", // Card custom background color
-  color: "#ffffff", // Card custom color
-  backgroundButtonColor: "#ffffff", // Card custom background primary button color
-  buttonColor: "#000000", // Card custom primary button color
-  backgroundButtonSecondaryColor: "#ffffff", // Card custom background secondary button color
-  colorButtonSecondary: "#000000", // Card custom secondary button color
-});
-
+{
+  id: 1,              // Unique identifier
+  name: 'JavaScript', // Label text
+  color: '#F7DF1E'    // Label color (hex, rgb, etc.)
+}
 ```
 
-```html
-<template>
-  <tv-card
-    @click-button="handleButton"
-    :configCard="configCard"
-  />
-</template>
+---
+## Events
+| Event name (kebab)       | Payload       | Description                                    |
+|--------------------------|---------------|------------------------------------------------|
+| `click-button`           | -             | Emitted when primary button is clicked.        |
+| `click-secondary-button` | -             | Emitted when secondary button is clicked.      |
+| `click-label`            | label object  | Emitted when a label is clicked, returns label.|
 
+Usage:
+```vue
+<TvCard 
+  :configCard="config"
+  @click-button="onPrimaryAction" 
+  @click-secondary-button="onSecondaryAction"
+  @click-label="onLabelClick"
+/>
+```
+
+---
+## Customization (Styles / Theming)
+The card supports extensive customization through the `configCard` object:
+
+### Basic Card with Custom Colors
+```vue
 <script setup>
-import { ref } from "vue";
-import TvCard from "@todovue/tv-card"
+import { ref } from 'vue'
+import { TvCard } from '@todovue/tv-card'
 
 const configCard = ref({
-  title: "Create Vue.js",
-  description: "Vue.js (commonly known as Vue; pronounced /vjuː/...",
-  alt: "Card Image",
-  image: "https://todovue.com/vue.webp",
-  primaryButtonText: "View more",
-  backgroundColor: "#000000",
-  color: "#ffffff",
-  backgroundButtonColor: "#ffffff",
-  buttonColor: "#000000",
-});
+  title: 'Custom Styled Card',
+  description: 'This card has custom colors applied',
+  image: 'https://example.com/image.jpg',
+  primaryButtonText: 'Action',
+  backgroundColor: '#46627f',
+  color: '#ffffff',
+  backgroundButtonColor: '#062131',
+  colorButton: '#ffffff'
+})
+</script>
 
-const handleButton = () => {
-  console.log("Button clicked");
+<template>
+  <TvCard :configCard="configCard" />
+</template>
+```
+
+### Card with Labels
+```vue
+<script setup>
+import { ref } from 'vue'
+import { TvCard } from '@todovue/tv-card'
+
+const configCard = ref({
+  title: 'Vue.js Tutorial',
+  description: 'Learn Vue.js with these comprehensive guides',
+  image: 'https://todovue.com/vue.webp',
+  primaryButtonText: 'Start Learning',
+  labels: [
+    { id: 1, name: 'JavaScript', color: '#F7DF1E' },
+    { id: 2, name: 'HTML', color: '#E34F26' },
+    { id: 3, name: 'CSS', color: '#1572B6' }
+  ],
+  limitLabels: 2 // Only show 2 labels
+})
+</script>
+
+<template>
+  <TvCard :configCard="configCard" @click-label="handleLabelClick" />
+</template>
+```
+
+### Card with Two Buttons
+```vue
+<script setup>
+import { ref } from 'vue'
+import { TvCard } from '@todovue/tv-card'
+
+const configCard = ref({
+  title: 'Advanced Vue Tutorial',
+  description: 'Deep dive into Vue.js advanced concepts',
+  image: 'https://todovue.com/vuejs.webp',
+  primaryButtonText: 'Read Article',
+  secondaryButtonText: 'View Source',
+  backgroundButtonColor: '#062131',
+  colorButton: '#ffffff',
+  backgroundButtonSecondaryColor: '#0eb096',
+  colorButtonSecondary: '#000000'
+})
+
+function handlePrimary() {
+  console.log('Primary action')
+}
+
+function handleSecondary() {
+  console.log('Secondary action')
 }
 </script>
+
+<template>
+  <TvCard 
+    :configCard="configCard"
+    @click-button="handlePrimary"
+    @click-secondary-button="handleSecondary"
+  />
+</template>
 ```
 
+---
+## Examples
+Check out the demo files in `src/utils/demos/` for more examples:
+- `default.vue` - Basic card usage
+- `withCustomColors.vue` - Full customization example
+- `withLabels.vue` - Card with labels
+- `withMultipleLabels.vue` - Card with label limit
+- `withTwoButtons.vue` - Card with primary and secondary buttons
+
+---
+## Accessibility
+- Always provide `alt` text for images for screen readers.
+- Button text should be descriptive of the action.
+- Label clicks are keyboard accessible through the underlying `TvLabel` component.
+- Color contrast should be considered when using custom colors.
+
+---
+## SSR Notes
+- No direct DOM (`window` / `document`) access in source → safe for SSR.
+- Styles are automatically applied when you import the library.
+- The component works seamlessly with Nuxt 3's server-side rendering.
+- Dependencies (`@todovue/tv-button` and `@todovue/tv-label`) are SSR-compatible.
+- Ensure you import `@todovue/tv-card/style.css` in an SSR-compatible entry if needed.
+
+---
+## Roadmap
+| Item                                        | Status      |
+|---------------------------------------------|-------------|
+| Add slot support for custom content         | Considering |
+| Add card variants (bordered, elevated, etc.)| Considering |
+| Add loading state                           | Considering |
+| Add theming API (CSS vars)                  | Considering |
+| Add image lazy loading option               | Considering |
+
+---
 ## Development
-Clone the repository and install the dependencies
 ```bash
 git clone https://github.com/TODOvue/tv-card.git
 cd tv-card
-yarn install
+npm install
+npm run dev     # run demo playground
+npm run build   # build library
 ```
+Local demo served from Vite using `index.html` + `src/demo` examples.
+
+---
+## Contributing
+PRs and issues welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
+
 ---
 ## License
-[MIT](https://github.com/TODOvue/tv-card/blob/main/LICENSE)
+MIT © TODOvue
+
+---
+### Attributions
+Crafted for the TODOvue component ecosystem
+
