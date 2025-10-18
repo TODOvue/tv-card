@@ -8,7 +8,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import TvCard from '@todovue/tv-card';
+import { TvCard } from '@todovue/tv-card';
 
 const configCard = ref({
   title: 'Write JavaScript',
