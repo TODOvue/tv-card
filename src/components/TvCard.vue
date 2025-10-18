@@ -1,6 +1,6 @@
 <script setup>
-import TvButton from "@todovue/tv-button";
-import TvLabel from "@todovue/tv-label";
+import { TvButton } from "@todovue/tv-button";
+import { TvLabel } from "@todovue/tv-label";
 import useCard from "../composable/useCard";
 
 const props = defineProps({
@@ -65,6 +65,4 @@ const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(pr
   </div>
 </template>
 
-<style lang="scss">
-  @use "../assets/scss/style.scss";
-</style>
+<style lang="scss" src="../assets/scss/style.scss"></style>

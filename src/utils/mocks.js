@@ -256,4 +256,4 @@ export const demos = [
     },
     html: WithMultipleLabels,
   },
-];;
+];

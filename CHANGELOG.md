@@ -5,6 +5,16 @@ All notable changes to `@todovue/tv-card` will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
+## [1.0.2] - 2025-10-17
+### 🛠️ Changed
+- The library build now uses `src/entry.ts` (exports both the component and the plugin) instead of directly exporting the `.vue` file.
+- CSS injection via JS has been removed for the library build (it is only kept for the demo), generating a `tv-card.css` file optimized for SSR/Nuxt.
+- Changed node-version to workflows release.yml to 20.
+
+### ✨ Added
+- Plugin installation support: `app.use(TvLabel)` or `app.use(TvLabelPlugin)`.
+- Explicit export of the style file: `import '@todovue/tv-label/style.css'`.
+- Documentation for usage in SSR and Nuxt 3 applications.
 
 ## [1.0.1] - 2025-05-07
 
@@ -26,5 +36,6 @@ This project adheres to [Semantic Versioning](https://semver.org/).
     - `clickSecondaryButton` (on secondary button click)
     - `clickLabel` (on label click)
 
+[1.0.2]: https://github.com/TODOvue/todovue-card/pull/6/files
 [1.0.1]: https://github.com/TODOvue/todovue-card/pull/4/files
 [1.0.0]: https://github.com/TODOvue/todovue-card/pull/3/files
