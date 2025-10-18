@@ -36,6 +36,6 @@ This project adheres to [Semantic Versioning](https://semver.org/).
     - `clickSecondaryButton` (on secondary button click)
     - `clickLabel` (on label click)
 
-[1.0.2]: https://github.com/TODOvue/todovue-card/pull/5/files
+[1.0.2]: https://github.com/TODOvue/todovue-card/pull/6/files
 [1.0.1]: https://github.com/TODOvue/todovue-card/pull/4/files
 [1.0.0]: https://github.com/TODOvue/todovue-card/pull/3/files
