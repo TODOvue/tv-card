@@ -20,7 +20,7 @@ export default defineConfig({
     }
     : {
       lib: {
-        entry: "src/components/TvCard.vue",
+        entry: "src/entry.ts",
         name: "TvCard",
         fileName: format => `tv-card.${format}.js`,
         formats: ["es", "cjs"]
