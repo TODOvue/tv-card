@@ -4,6 +4,10 @@ All notable changes to `@todovue/tv-card` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.0.4] - 2025-11-13
+### 🐛 Fixed
+- Fixed position of title in card when the title is long and wraps into multiple lines.
+
 ## [1.0.3] - 2025-11-13
 ### 🐛 Fixed
 - Fixed styles for dark and light mode in the library build.
