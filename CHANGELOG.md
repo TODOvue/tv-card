@@ -4,7 +4,14 @@ All notable changes to `@todovue/tv-card` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
----
+## [1.0.3] - 2025-11-13
+### 🐛 Fixed
+- Fixed styles for dark and light mode in the library build.
+- Fixed the title overflow when it is too long and does not fit on a single line.
+
+### 🛠️ Changed
+- Corrected demo imports.
+
 ## [1.0.2] - 2025-10-17
 ### 🛠️ Changed
 - The library build now uses `src/entry.ts` (exports both the component and the plugin) instead of directly exporting the `.vue` file.

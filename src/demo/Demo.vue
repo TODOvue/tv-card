@@ -3,7 +3,7 @@ import { TvDemo } from '@todovue/tv-demo';
 import { defineAsyncComponent } from 'vue';
 
 const TvCard = defineAsyncComponent(() => import('../components/TvCard.vue'));
-import { demos } from "../utils/mocks.js";
+import { demos } from './utils/mocks.js';
 </script>
 
 <template>
@@ -15,6 +15,6 @@ import { demos } from "../utils/mocks.js";
     npm-install="@todovue/tv-card"
     source-link="https://github.com/TODOvue/tv-card"
     url-clone="https://github.com/TODOvue/tv-card.git"
-    version="1.0.2"
+    version="1.0.3"
   />
 </template>

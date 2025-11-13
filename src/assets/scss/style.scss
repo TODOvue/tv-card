@@ -10,25 +10,24 @@
 
 .tv-card {
   @include mixins.backgroundColorAndTextColor(variables.$dark-card-bg, variables.$dark-text);
-
   &-title {
     background: variables.$dark-card-bg;
-    min-height: 60px;
-    max-height: 85px;
-    line-height: 1.4;
+    min-height: 50px;
+    line-height: 1.3;
     text-align: center;
-    padding: 12px 15px;
-    font-size: 16px;
+    padding: 10px 15px;
+    font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    white-space: normal;
     word-wrap: break-word;
+    word-break: break-word;
     border-radius: 10px;
+    max-width: 100%;
   }
 }
 
@@ -115,5 +114,15 @@
   }
   .tv-pt-0 {
     padding-top: 0 !important;
+  }
+}
+
+.light-mode {
+  .tv-card {
+    @include mixins.backgroundColorAndTextColor(variables.$light-card-bg, variables.$light-text);
+
+    &-title {
+      background: variables.$light-card-bg;
+    }
   }
 }
