@@ -9,6 +9,7 @@
 <script setup>
 import { ref } from 'vue';
 import { TvCard } from '@todovue/tv-card';
+import '@todovue/tv-card/style.css';
 
 const configCard = ref({
   title: 'Write JavaScript',
@@ -31,7 +32,6 @@ const configCard = ref({
       id: 3,
       name: 'CSS',
       color: '#1572B6',
-
     }
   ],
 });
