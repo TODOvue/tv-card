@@ -5,8 +5,15 @@
 A flexible and customizable Vue 3 card component for showcasing content with title, image, description, and action buttons. Perfect for Single Page Apps and Server-Side Rendered (SSR) environments like Nuxt 3.
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3c413109-63aa-41d7-8126-a527435f5512/deploy-status)](https://app.netlify.com/projects/tv-card/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card)
+[![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card)
 ![License](https://img.shields.io/github/license/TODOvue/tv-card)
+![Release Date](https://img.shields.io/github/release-date/TODOvue/tv-card)
+![Bundle Size](https://img.shields.io/bundlephobia/minzip/@todovue/tv-card)
+![Node Version](https://img.shields.io/node/v/@todovue/tv-card)
+![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-card)
+![Stars](https://img.shields.io/github/stars/TODOvue/tv-card?style=social)
 
 > Demo: https://tv-card.netlify.app/
 
@@ -14,6 +21,7 @@ A flexible and customizable Vue 3 card component for showcasing content with tit
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
+- [Style usage](#style-usage)
 - [Quick Start (SPA)](#quick-start-spa)
 - [Nuxt 3 / SSR Usage](#nuxt-3--ssr-usage)
 - [Component Registration Options](#component-registration-options)
@@ -53,6 +61,31 @@ yarn add @todovue/tv-card
 Using pnpm:
 ```bash
 pnpm add @todovue/tv-card
+```
+
+---
+## Style usage
+
+### Vue 3 SPA (Vite)
+```ts
+// main.ts
+import { createApp } from 'vue'
+import App from './App.vue'
+
+import '@todovue/tv-card/style.css'
+import { TvCard } from '@todovue/tv-card'
+
+const app = createApp(App)
+app.component('TvCard', TvCard)
+app.mount('#app')
+```
+
+### Nuxt 3/4
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  css: ['@todovue/tv-card/style.css'],
+})
 ```
 
 ---
@@ -316,4 +349,3 @@ MIT © TODOvue
 ---
 ### Attributions
 Crafted for the TODOvue component ecosystem
-

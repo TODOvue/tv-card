@@ -65,4 +65,4 @@ const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(pr
   </div>
 </template>
 
-<style lang="scss" src="../assets/scss/style.scss"></style>
+<style></style>
