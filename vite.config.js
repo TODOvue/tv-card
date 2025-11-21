@@ -25,7 +25,7 @@ export default defineConfig({
         formats: ["es", "cjs"]
       },
       rollupOptions: {
-        external: ["vue"],
+        external: ["vue", "@todovue/tv-button", "@todovue/tv-label"],
         output: {
           globals: {
             vue: "Vue"

@@ -30,7 +30,8 @@
       "import": "./dist/tv-card.es.js",
       "require": "./dist/tv-card.cjs.js"
     },
-    "./style.css": "./dist/tv-card.css"
+    "./style.css": "./dist/tv-card.css",
+    "./nuxt": "./nuxt.js"
   },
   "main": "dist/tv-card.cjs.js",
   "module": "dist/tv-card.es.js",
@@ -38,7 +39,8 @@
   "files": [
     "dist",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "nuxt.js"
   ],
   "engines": {
     "node": ">=20.19.0"
@@ -51,17 +53,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:demo": "cp README.md public/ && VITE_BUILD_TARGET=demo vite build"
+    "build:demo": "cp README.md public/ && cp CHANGELOG.md public/ && VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
   },
   "dependencies": {
-    "@todovue/tv-button": "^1.0.0",
-    "@todovue/tv-label": "^1.0.0"
+    "@todovue/tv-button": "^1.2.2",
+    "@todovue/tv-label": "^1.1.1"
   },
   "devDependencies": {
-    "@todovue/tv-demo": "^1.0.0",
+    "@todovue/tv-demo": "^1.1.0",
     "@vitejs/plugin-vue": "^6.0.0",
     "sass": "^1.0.0",
     "vite": "^7.0.0",
