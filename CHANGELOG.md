@@ -4,7 +4,7 @@ All notable changes to `@todovue/tv-card` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [1.2.0] - 2025-11-20
+## [1.1.0] - 2025-11-21
 
 ### Added
 - Added `nux.js` configuration file for Nuxt 4 integration.
