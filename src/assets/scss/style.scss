@@ -1,8 +1,6 @@
 @use "mixins.scss";
 @use "variables.scss";
 @use "global.scss";
-@import '@todovue/tv-button/style.css';
-@import '@todovue/tv-label/style.css';
 
 %alignCenterFlex {
   align-items: center;

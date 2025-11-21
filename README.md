@@ -1,4 +1,4 @@
-<p align="center"><img width="150" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=d8eb592f-e4a9-4b02-8aff-62d337745f41" alt="TODOvue logo">
+<p align="center"><img width="150" src="https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png" alt="TODOvue logo">
 </p>
 
 # TODOvue Card (TvCard)
@@ -73,6 +73,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 import '@todovue/tv-card/style.css'
+import '@todovue/tv-button/style.css'
+import '@todovue/tv-style/style.css'
 import { TvCard } from '@todovue/tv-card'
 
 const app = createApp(App)
@@ -84,7 +86,9 @@ app.mount('#app')
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  css: ['@todovue/tv-card/style.css'],
+  modules: [
+    '@todovue/tv-card/nuxt'
+  ]
 })
 ```
 

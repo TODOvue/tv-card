@@ -6,14 +6,14 @@ import { demos } from './utils/mocks.js';
 </script>
 
 <template>
-  <tv-demo
+  <TvDemo
     :component="TvCard"
     :variants="demos"
     hide-background
-    name-component="TvCard"
+    component-name="TvCard"
     npm-install="@todovue/tv-card"
     source-link="https://github.com/TODOvue/tv-card"
     url-clone="https://github.com/TODOvue/tv-card.git"
-    version="1.0.5"
+    version="1.1.0"
   />
 </template>

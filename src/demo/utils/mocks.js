@@ -168,8 +168,7 @@ export const demos = [
         description:
           "Vue.js (commonly known as Vue; pronounced /vjuː/, like 'view') is an open-source JavaScript framework for building user interfaces and single-page applications.",
         alt: "Card Image",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/vue.webp?alt=media&token=7b717129-29c3-4f36-846d-c0243b28e216",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
         primaryButtonText: "View more",
       },
     },
@@ -186,8 +185,7 @@ export const demos = [
           "JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.",
         primaryButtonText: "See more",
         alt: "Card Image",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/cards%2Fcode-g310d81d24_640.webp?alt=media&token=c25e7d00-9386-4823-bf56-f0d1081069d1",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701538/kua2i5ayhbne1dmmexfd.webp",
         labels: labels,
       },
     },
@@ -204,8 +202,7 @@ export const demos = [
           "Web design encompasses many different skills and disciplines in the production and maintenance of websites.",
         primaryButtonText: "View code",
         secondaryButtonText: "View blog",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/cards%2Fweb-design-3411373_1280.webp?alt=media&token=249aaa7a-42e7-4fc1-98fc-edee650c01cd",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701589/ydwpp78ukjqu22zammi9.webp",
         alt: "Card Image",
         labels: labels,
       },
@@ -223,8 +220,7 @@ export const demos = [
           "Vue.js (commonly known as Vue; pronounced /vjuː/, like 'view') is an open-source JavaScript framework for building user interfaces and single-page applications.",
         primaryButtonText: "View code",
         secondaryButtonText: "View blog",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/cards%2Ftyping-gf76f9bdc5_640.webp?alt=media&token=bbf414f6-9a98-484e-a020-901bf20efd15",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701619/a8jqdthoa8psda0yd9aw.webp",
         alt: "Card Image",
         labels: labels,
         backgroundColor: "#46627f",
@@ -248,8 +244,7 @@ export const demos = [
           "JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.",
         primaryButtonText: "See more",
         alt: "Card Image",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/cards%2Fcode-g310d81d24_640.webp?alt=media&token=c25e7d00-9386-4823-bf56-f0d1081069d1",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1744231813/samples/cup-on-a-table.jpg",
         labels: labels,
         limitLabels: 10,
       },

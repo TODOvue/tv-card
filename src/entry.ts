@@ -1,15 +1,21 @@
-import TvCard from './components/TvCard.vue'
+import type { App, Plugin } from 'vue'
+import _TvCard from './components/TvCard.vue'
 import './style.scss'
 
-(TvCard as any).install = (app: any) => {
+const TvCard = _TvCard as typeof _TvCard & Plugin;
+TvCard.install = (app: App) => {
   app.component('TvCard', TvCard)
 };
 
-export const TvCardPlugin = {
-  install(app: any) {
-    app.component('TvCard', TvCard)
+export { TvCard }
+
+export const TvCardPlugin: Plugin = {
+  install: TvCard.install
+};
+export default TvCard;
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    TvCard: typeof TvCard;
   }
 }
-
-export { TvCard }
-export default TvCard
