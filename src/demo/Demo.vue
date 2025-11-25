@@ -14,6 +14,6 @@ import { demos } from './utils/mocks.js';
     npm-install="@todovue/tv-card"
     source-link="https://github.com/TODOvue/tv-card"
     url-clone="https://github.com/TODOvue/tv-card.git"
-    version="1.1.0"
+    version="1.0.7"
   />
 </template>
