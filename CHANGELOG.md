@@ -4,7 +4,15 @@ All notable changes to `@todovue/tv-card` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [1.1.0] - 2025-11-21
+## [1.0.7] - 2025-11-24
+
+### Dependencies
+- Updated the `@todovue/tv-demo` dependency to `^1.2.2` to ensure compatibility with the latest changes.
+
+### Changed
+- Updated background and text colors for dark and light themes to improve readability and visual comfort.
+
+## [1.0.6] - 2025-11-21
 
 ### Added
 - Added `nux.js` configuration file for Nuxt 4 integration.
@@ -15,9 +23,9 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Added `CHANGELOG.md` in script to generate demo and documentation site.
 
 ### Dependencies
-- Updated the `@todovue/tv-demo` dependency to `^1.2.0` to ensure compatibility with the latest changes.
+- Updated the `@todovue/tv-demo` dependency to `^1.1.0` to ensure compatibility with the latest changes.
 - Updated the `@todovue/tv-button` dependency to `^1.2.2` to ensure compatibility with the latest changes.
-- Updated the `@todovue/tv-demo` dependency to `^1.1.1` to ensure compatibility with the latest changes.
+- Updated the `@todovue/tv-label` dependency to `^1.1.1` to ensure compatibility with the latest changes.
 
 ## [1.0.5] - 2025-11-15
 
