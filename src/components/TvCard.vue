@@ -8,6 +8,10 @@ const props = defineProps({
     type: Object,
     default: () => ({}),
   },
+  isVertical: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emit = defineEmits(["clickButton", "clickLabel", "clickSecondaryButton"]);
@@ -16,7 +20,7 @@ const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(pr
 </script>
 
 <template>
-  <div class="tv-card-body" v-if="card">
+  <div class="tv-card-body" :class="{ 'tv-card-vertical': isVertical }" v-if="card">
     <div class="tv-card" :style="card.customStyleCard">
       <div class="tv-card-image">
         <img :src="card.image" :alt="card.alt" />

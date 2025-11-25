@@ -3,6 +3,9 @@ import WithLabels from './demos/withLabels.vue?raw';
 import WithTwoButtons from './demos/withTwoButtons.vue?raw';
 import WithCustomColors from './demos/withCustomColors.vue?raw';
 import WithMultipleLabels from './demos/withMultipleLabels.vue?raw';
+import WithVertical from './demos/withVertical.vue?raw';
+import WithVerticalAndLabels from './demos/withVerticalAndLabels.vue?raw';
+import WithVerticalAndTwoButtons from './demos/withVerticalAndTwoButtons.vue?raw';
 
 const labels = [
   {
@@ -250,5 +253,58 @@ export const demos = [
       },
     },
     html: WithMultipleLabels,
+  },
+  {
+    id: 6,
+    title: "Vertical layout",
+    description: "Displays the card in a horizontal/vertical layout with image on the left side.",
+    propsData: {
+      configCard: {
+        title: "The Creative Routine Before Start Coding",
+        description:
+          "A personal routine I use that helps me generate new ideas and start coding more creatively.",
+        primaryButtonText: "Read more",
+        alt: "Card Image",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
+      },
+      isVertical: true,
+    },
+    html: WithVertical,
+  },
+  {
+    id: 7,
+    title: "Vertical with labels",
+    description: "Combines the vertical layout with label chips for categorization.",
+    propsData: {
+      configCard: {
+        title: "The Creative Routine Before Start Coding",
+        description:
+          "A personal routine I use that helps me generate new ideas and start coding more creatively.",
+        primaryButtonText: "Read more",
+        alt: "Card Image",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
+        labels: labels,
+      },
+      isVertical: true,
+    },
+    html: WithVerticalAndLabels,
+  },
+  {
+    id: 8,
+    title: "Vertical with two buttons",
+    description: "Vertical layout with primary and secondary action buttons stacked vertically.",
+    propsData: {
+      configCard: {
+        title: "The Creative Routine Before Start Coding",
+        description:
+          "A personal routine I use that helps me generate new ideas and start coding more creatively.",
+        primaryButtonText: "Read more",
+        secondaryButtonText: "Save",
+        alt: "Card Image",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
+      },
+      isVertical: true,
+    },
+    html: WithVerticalAndTwoButtons,
   },
 ];
