@@ -2,7 +2,7 @@
 </p>
 
 # TODOvue Card (TvCard)
-A flexible and customizable Vue 4 card component for showcasing content with title, image, description, and action buttons. Perfect for Single Page Apps and Server-Side Rendered (SSR) environments like Nuxt 3.
+A flexible and customizable Vue 3 card component for showcasing content with title, image, description, and action buttons. Perfect for Single Page Apps and Server-Side Rendered (SSR) environments like Nuxt 4.
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-card.svg)](https://www.npmjs.com/package/@todovue/tv-card)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3c413109-63aa-41d7-8126-a527435f5512/deploy-status)](https://app.netlify.com/projects/tv-card/deploys)
