@@ -8,6 +8,10 @@ const props = defineProps({
     type: Object,
     default: () => ({}),
   },
+  isHorizontal: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emit = defineEmits(["clickButton", "clickLabel", "clickSecondaryButton"]);
@@ -16,7 +20,7 @@ const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(pr
 </script>
 
 <template>
-  <div class="tv-card-body" v-if="card">
+  <div class="tv-card-body" :class="{ 'tv-card-horizontal': isHorizontal }" v-if="card">
     <div class="tv-card" :style="card.customStyleCard">
       <div class="tv-card-image">
         <img :src="card.image" :alt="card.alt" />
@@ -44,17 +48,17 @@ const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(pr
           <tv-button
             @click="handleClick"
             rounded
-            :class="{ 'tv-btn-small': card.secondaryButtonText }"
+            :small="!isHorizontal || !card.secondaryButtonText"
             :customStyle="card.customStyleButton"
           >
             {{ card.primaryButtonText }}
           </tv-button>
           <tv-button
             @click="handleSecondaryClick"
-            isRounded
+            rounded
             v-if="card.secondaryButtonText"
-            isInfo
-            isSmall
+            info
+            :small="!isHorizontal"
             :customStyle="card.customStyleButtonSecondary"
           >
             {{ card.secondaryButtonText }}

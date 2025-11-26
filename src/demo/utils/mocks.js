@@ -3,6 +3,9 @@ import WithLabels from './demos/withLabels.vue?raw';
 import WithTwoButtons from './demos/withTwoButtons.vue?raw';
 import WithCustomColors from './demos/withCustomColors.vue?raw';
 import WithMultipleLabels from './demos/withMultipleLabels.vue?raw';
+import WithHorizontal from './demos/withHorizontal.vue?raw';
+import WithHorizontalAndLabels from './demos/withHorizontalAndLabels.vue?raw';
+import WithHorizontalAndTwoButtons from './demos/withHorizontalAndTwoButtons.vue?raw';
 
 const labels = [
   {
@@ -250,5 +253,58 @@ export const demos = [
       },
     },
     html: WithMultipleLabels,
+  },
+  {
+    id: 6,
+    title: "Horizontal layout",
+    description: "Displays the card in a horizontal layout with image on the left side.",
+    propsData: {
+      configCard: {
+        title: "The Creative Routine Before Start Coding",
+        description:
+          "A personal routine I use that helps me generate new ideas and start coding more creatively.",
+        primaryButtonText: "Read more",
+        alt: "Card Image",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
+      },
+      isHorizontal: true,
+    },
+    html: WithHorizontal,
+  },
+  {
+    id: 7,
+    title: "Horizontal with labels",
+    description: "Combines the horizontal layout with label chips for categorization.",
+    propsData: {
+      configCard: {
+        title: "The Creative Routine Before Start Coding",
+        description:
+          "A personal routine I use that helps me generate new ideas and start coding more creatively.",
+        primaryButtonText: "Read more",
+        alt: "Card Image",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
+        labels: labels,
+      },
+      isHorizontal: true,
+    },
+    html: WithHorizontalAndLabels,
+  },
+  {
+    id: 8,
+    title: "Horizontal with two buttons",
+    description: "Horizontal layout with primary and secondary action buttons stacked horizontally.",
+    propsData: {
+      configCard: {
+        title: "The Creative Routine Before Start Coding",
+        description:
+          "A personal routine I use that helps me generate new ideas and start coding more creatively.",
+        primaryButtonText: "Read more",
+        secondaryButtonText: "Save",
+        alt: "Card Image",
+        image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
+      },
+      isHorizontal: true,
+    },
+    html: WithHorizontalAndTwoButtons,
   },
 ];
