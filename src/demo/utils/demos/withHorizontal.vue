@@ -3,7 +3,7 @@
     @click-button="handleButton"
     @click-secondary-button="handleSecondaryButton"
     :configCard="configCard"
-    is-vertical
+    is-horizontal
   />
 </template>
 

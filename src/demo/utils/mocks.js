@@ -3,9 +3,9 @@ import WithLabels from './demos/withLabels.vue?raw';
 import WithTwoButtons from './demos/withTwoButtons.vue?raw';
 import WithCustomColors from './demos/withCustomColors.vue?raw';
 import WithMultipleLabels from './demos/withMultipleLabels.vue?raw';
-import WithVertical from './demos/withVertical.vue?raw';
-import WithVerticalAndLabels from './demos/withVerticalAndLabels.vue?raw';
-import WithVerticalAndTwoButtons from './demos/withVerticalAndTwoButtons.vue?raw';
+import WithHorizontal from './demos/WithHorizontal.vue?raw';
+import WithHorizontalAndLabels from './demos/WithHorizontalAndLabels.vue?raw';
+import WithHorizontalAndTwoButtons from './demos/WithHorizontalAndTwoButtons.vue?raw';
 
 const labels = [
   {
@@ -267,9 +267,9 @@ export const demos = [
         alt: "Card Image",
         image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
       },
-      isVertical: true,
+      isHorizontal: true,
     },
-    html: WithVertical,
+    html: WithHorizontal,
   },
   {
     id: 7,
@@ -285,9 +285,9 @@ export const demos = [
         image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
         labels: labels,
       },
-      isVertical: true,
+      isHorizontal: true,
     },
-    html: WithVerticalAndLabels,
+    html: WithHorizontalAndLabels,
   },
   {
     id: 8,
@@ -303,8 +303,8 @@ export const demos = [
         alt: "Card Image",
         image: "https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763701508/jarnmxxvmhbisvpzzfwu.webp",
       },
-      isVertical: true,
+      isHorizontal: true,
     },
-    html: WithVerticalAndTwoButtons,
+    html: WithHorizontalAndTwoButtons,
   },
 ];
