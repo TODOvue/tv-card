@@ -4,6 +4,13 @@ All notable changes to `@todovue/tv-card` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2025-11-25
+
+### Fixed
+- Fixed styles for horizontal variant of the card component.
+- Fixed `small` prop styles for horizontal variant of the card component.
+- Fixed full width styles for horizontal variant of the card component.
+
 ## [1.1.0] - 2025-11-25
 
 ### Added
@@ -86,6 +93,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
     - `clickSecondaryButton` (on secondary button click)
     - `clickLabel` (on label click)
 
+[1.1.1]: https://github.com/TODOvue/todovue-card/pull/13/files
 [1.1.0]: https://github.com/TODOvue/todovue-card/pull/12/files
 [1.0.7]: https://github.com/TODOvue/todovue-card/pull/11/files
 [1.0.6]: https://github.com/TODOvue/todovue-card/pull/10/files

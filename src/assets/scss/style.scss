@@ -129,7 +129,7 @@
 }
 
 .tv-card-horizontal {
-  max-width: 700px;
+  max-width: 100%;
   width: 100%;
 
   .tv-card {
@@ -181,7 +181,7 @@
         text-align: left;
         border-radius: 10px;
         padding: 0;
-        font-size: 18px;
+        font-size: 24px;
       }
 
       .tv-card-label {
@@ -194,7 +194,7 @@
         text-align: left;
         padding: 0;
         margin-bottom: 0;
-        font-size: 16px;
+        font-size: 18px;
       }
     }
 

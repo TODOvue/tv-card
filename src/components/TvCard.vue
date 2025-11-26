@@ -48,7 +48,7 @@ const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(pr
           <tv-button
             @click="handleClick"
             rounded
-            :small="!isHorizontal || !card.secondaryButtonText"
+            :small="card.secondaryButtonText && !isHorizontal"
             :customStyle="card.customStyleButton"
           >
             {{ card.primaryButtonText }}
