@@ -4,7 +4,7 @@
   "author": "Cristhian Daza",
   "description": "TvCard is a customizable and flexible card component for Vue 3 applications, ideal for showcasing content with a title, image, description, and action buttons. It supports additional elements like secondary buttons and labels for enhanced interactivity and visual structure.",
   "license": "MIT",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "type": "module",
   "repository": {
     "type": "git",
