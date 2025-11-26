@@ -256,8 +256,8 @@ export const demos = [
   },
   {
     id: 6,
-    title: "Vertical layout",
-    description: "Displays the card in a horizontal/vertical layout with image on the left side.",
+    title: "Horizontal layout",
+    description: "Displays the card in a horizontal layout with image on the left side.",
     propsData: {
       configCard: {
         title: "The Creative Routine Before Start Coding",
@@ -273,8 +273,8 @@ export const demos = [
   },
   {
     id: 7,
-    title: "Vertical with labels",
-    description: "Combines the vertical layout with label chips for categorization.",
+    title: "Horizontal with labels",
+    description: "Combines the horizontal layout with label chips for categorization.",
     propsData: {
       configCard: {
         title: "The Creative Routine Before Start Coding",
@@ -291,8 +291,8 @@ export const demos = [
   },
   {
     id: 8,
-    title: "Vertical with two buttons",
-    description: "Vertical layout with primary and secondary action buttons stacked vertically.",
+    title: "Horizontal with two buttons",
+    description: "Horizontal layout with primary and secondary action buttons stacked horizontally.",
     propsData: {
       configCard: {
         title: "The Creative Routine Before Start Coding",
