@@ -3,9 +3,9 @@ import WithLabels from './demos/withLabels.vue?raw';
 import WithTwoButtons from './demos/withTwoButtons.vue?raw';
 import WithCustomColors from './demos/withCustomColors.vue?raw';
 import WithMultipleLabels from './demos/withMultipleLabels.vue?raw';
-import WithHorizontal from './demos/WithHorizontal.vue?raw';
-import WithHorizontalAndLabels from './demos/WithHorizontalAndLabels.vue?raw';
-import WithHorizontalAndTwoButtons from './demos/WithHorizontalAndTwoButtons.vue?raw';
+import WithHorizontal from './demos/withHorizontal.vue?raw';
+import WithHorizontalAndLabels from './demos/withHorizontalAndLabels.vue?raw';
+import WithHorizontalAndTwoButtons from './demos/withHorizontalAndTwoButtons.vue?raw';
 
 const labels = [
   {
