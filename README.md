@@ -31,7 +31,6 @@ A flexible and customizable Vue 3 card component for showcasing content with tit
 - [Examples](#examples)
 - [Accessibility](#accessibility)
 - [SSR Notes](#ssr-notes)
-- [Roadmap](#roadmap)
 - [Development](#development)
 - [Contributing](#contributing)
 - [License](#license)
@@ -158,11 +157,17 @@ import { TvCard } from '@todovue/tv-card'
 |-------------------------------------------------------------------|------------------------------------------------|
 | Global via `app.use(TvCard)`                                      | Many usages across app / design system install |
 | Local named import `{ TvCard }`                                   | Isolated / code-split contexts                 |
-| Direct default import `import { TvCard } from '@todovue/tv-card'`     | Single usage or manual registration            |
+| Direct default import `import { TvCard } from '@todovue/tv-card'` | Single usage or manual registration            |
 | Plugin import `{ TvCardPlugin }`                                  | Explicit plugin installation                   |
 
 ---
 ## Props
+
+| Prop Name    | Type    | Required | Default | Description                                     |
+|--------------|---------|----------|---------|-------------------------------------------------|
+| configCard   | object  | Yes      | -       | Configuration object for the card (see below).  |
+| isHorizontal | boolean | No       | false   | If true, renders the card in horizontal layout. |
+
 The component accepts a single prop `configCard` which is an object with the following structure:
 
 | Property                         | Type     | Required | Default | Description                                      |
@@ -193,11 +198,11 @@ The component accepts a single prop `configCard` which is an object with the fol
 
 ---
 ## Events
-| Event name (kebab)       | Payload       | Description                                    |
-|--------------------------|---------------|------------------------------------------------|
-| `click-button`           | -             | Emitted when primary button is clicked.        |
-| `click-secondary-button` | -             | Emitted when secondary button is clicked.      |
-| `click-label`            | label object  | Emitted when a label is clicked, returns label.|
+| Event name (kebab)       | Payload      | Description                                     |
+|--------------------------|--------------|-------------------------------------------------|
+| `click-button`           | -            | Emitted when primary button is clicked.         |
+| `click-secondary-button` | -            | Emitted when secondary button is clicked.       |
+| `click-label`            | label object | Emitted when a label is clicked, returns label. |
 
 Usage:
 ```vue
@@ -320,16 +325,6 @@ Check out the demo files in `src/utils/demos/` for more examples:
 - The component works seamlessly with Nuxt 3's server-side rendering.
 - Dependencies (`@todovue/tv-button` and `@todovue/tv-label`) are SSR-compatible.
 - Ensure you import `@todovue/tv-card/style.css` in an SSR-compatible entry if needed.
-
----
-## Roadmap
-| Item                                        | Status      |
-|---------------------------------------------|-------------|
-| Add slot support for custom content         | Considering |
-| Add card variants (bordered, elevated, etc.)| Considering |
-| Add loading state                           | Considering |
-| Add theming API (CSS vars)                  | Considering |
-| Add image lazy loading option               | Considering |
 
 ---
 ## Development
