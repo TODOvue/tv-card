@@ -6,9 +6,10 @@
   "license": "MIT",
   "version": "1.1.0",
   "type": "module",
+  "homepage": "https://ui.todovue.blog/card",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TODOvue/tv-card.git"
+    "url": "git+https://github.com/TODOvue/tv-card.git"
   },
   "bugs": {
     "url": "https://github.com/TODOvue/tv-card/issues"
@@ -56,17 +57,17 @@
     "build:demo": "cp README.md public/ && cp CHANGELOG.md public/ && VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
-    "vue": "^3.0.0"
+    "vue": "^3.5.26"
   },
   "dependencies": {
-    "@todovue/tv-button": "^1.2.2",
-    "@todovue/tv-label": "^1.1.1"
+    "@todovue/tv-button": "^1.2.3",
+    "@todovue/tv-label": "^1.1.2"
   },
   "devDependencies": {
-    "@todovue/tv-demo": "^1.2.2",
-    "@vitejs/plugin-vue": "^6.0.0",
-    "sass": "^1.0.0",
-    "vite": "^7.0.0",
-    "vite-plugin-dts": "^4.0.0"
+    "@todovue/tv-demo": "^1.2.7",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "sass": "^1.97.1",
+    "vite": "^7.3.0",
+    "vite-plugin-dts": "^4.5.4"
   }
 }
