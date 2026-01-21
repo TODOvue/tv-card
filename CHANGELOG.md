@@ -4,6 +4,15 @@ All notable changes to `@todovue/tv-card` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Dependencies
+- Updated `@todovue/tv-button` to `^1.2.4`.
+- Updated `@todovue/tv-label` to `^1.2.1`.
+- Updated `@todovue/tv-demo` to `^1.4.4`.
+- Updated `sass` to `^1.97.2`.
+- Updated `vite` to `^7.3.1`.
+
 ## [1.1.2] - 2025-12-27
 
 ### Added

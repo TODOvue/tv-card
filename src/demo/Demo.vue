@@ -15,5 +15,6 @@ import { demos } from './utils/mocks.js';
     source-link="https://github.com/TODOvue/tv-card"
     url-clone="https://github.com/TODOvue/tv-card.git"
     version="1.1.2"
+    :manual-emits="['clickButton', 'clickLabel', 'clickSecondaryButton']"
   />
 </template>
