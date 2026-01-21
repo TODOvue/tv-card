@@ -4,6 +4,18 @@ All notable changes to `@todovue/tv-card` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.3] - 2026-01-21
+
+### Removed
+- Removed the `uppercase` text transformation from title styles to improve readability and allow for more flexible typography.
+
+### Dependencies
+- Updated `@todovue/tv-button` to `^1.2.4`.
+- Updated `@todovue/tv-label` to `^1.2.1`.
+- Updated `@todovue/tv-demo` to `^1.4.4`.
+- Updated `sass` to `^1.97.2`.
+- Updated `vite` to `^7.3.1`.
+
 ## [1.1.2] - 2025-12-27
 
 ### Added
@@ -109,6 +121,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
     - `clickSecondaryButton` (on secondary button click)
     - `clickLabel` (on label click)
 
+[1.1.3]: https://github.com/TODOvue/todovue-card/pull/15/files
 [1.1.2]: https://github.com/TODOvue/todovue-card/pull/14/files
 [1.1.1]: https://github.com/TODOvue/todovue-card/pull/13/files
 [1.1.0]: https://github.com/TODOvue/todovue-card/pull/12/files

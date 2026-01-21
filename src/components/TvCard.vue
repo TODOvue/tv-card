@@ -35,6 +35,7 @@ const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(pr
             :key="label.id"
             :color="label.color"
             @click="handleClickLabel(label)"
+            size="sm"
           >
             {{ label.name }}
           </tv-label>
@@ -48,7 +49,6 @@ const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(pr
           <tv-button
             @click="handleClick"
             rounded
-            :small="card.secondaryButtonText && !isHorizontal"
             :customStyle="card.customStyleButton"
           >
             {{ card.primaryButtonText }}
@@ -57,8 +57,7 @@ const { handleClickLabel, handleClick, handleSecondaryClick, card } = useCard(pr
             @click="handleSecondaryClick"
             rounded
             v-if="card.secondaryButtonText"
-            info
-            :small="!isHorizontal"
+            variant="info"
             :customStyle="card.customStyleButtonSecondary"
           >
             {{ card.secondaryButtonText }}
