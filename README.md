@@ -16,13 +16,12 @@ A flexible and customizable Vue 3 card component for showcasing content with tit
 
 > Demo: https://ui.todovue.blog/card
 
----
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
 - [Style usage](#style-usage)
 - [Quick Start (SPA)](#quick-start-spa)
-- [Nuxt 3 / SSR Usage](#nuxt-3--ssr-usage)
+- [Nuxt 4 / SSR Usage](#nuxt-4--ssr-usage)
 - [Component Registration Options](#component-registration-options)
 - [Props](#props)
 - [Events](#events)
@@ -34,7 +33,6 @@ A flexible and customizable Vue 3 card component for showcasing content with tit
 - [Contributing](#contributing)
 - [License](#license)
 
----
 ## Features
 - Clean and modern card layout with image, title, and description
 - Primary and secondary action buttons
@@ -46,7 +44,6 @@ A flexible and customizable Vue 3 card component for showcasing content with tit
 - Tree-shake friendly (Vue marked external in library build)
 - TypeScript support
 
----
 ## Installation
 Using npm:
 ```bash
@@ -61,7 +58,6 @@ Using pnpm:
 pnpm add @todovue/tv-card
 ```
 
----
 ## Style usage
 
 ### Vue 3 SPA (Vite)
@@ -90,7 +86,6 @@ export default defineNuxtConfig({
 })
 ```
 
----
 ## Quick Start (SPA)
 Global registration (main.js / main.ts):
 ```js
@@ -126,8 +121,7 @@ function handleButton() {
 </template>
 ```
 
----
-## Nuxt 3 / SSR Usage
+## Nuxt 4 / SSR Usage
 Create a plugin file: `plugins/tv-card.client.ts` (client-only is fine, or without suffix for SSR as it is safe):
 ```ts
 import { defineNuxtPlugin } from '#app'
@@ -150,7 +144,6 @@ import { TvCard } from '@todovue/tv-card'
 </script>
 ```
 
----
 ## Component Registration Options
 | Approach                                                          | When to use                                    |
 |-------------------------------------------------------------------|------------------------------------------------|
@@ -159,7 +152,6 @@ import { TvCard } from '@todovue/tv-card'
 | Direct default import `import { TvCard } from '@todovue/tv-card'` | Single usage or manual registration            |
 | Plugin import `{ TvCardPlugin }`                                  | Explicit plugin installation                   |
 
----
 ## Props
 
 | Prop Name    | Type    | Required | Default | Description                                     |
@@ -195,7 +187,6 @@ The component accepts a single prop `configCard` which is an object with the fol
 }
 ```
 
----
 ## Events
 | Event name (kebab)       | Payload      | Description                                     |
 |--------------------------|--------------|-------------------------------------------------|
@@ -213,7 +204,6 @@ Usage:
 />
 ```
 
----
 ## Customization (Styles / Theming)
 The card supports extensive customization through the `configCard` object:
 
@@ -301,7 +291,6 @@ function handleSecondary() {
 </template>
 ```
 
----
 ## Examples
 Check out the demo files in `src/utils/demos/` for more examples:
 - `default.vue` - Basic card usage
@@ -310,14 +299,12 @@ Check out the demo files in `src/utils/demos/` for more examples:
 - `withMultipleLabels.vue` - Card with label limit
 - `withTwoButtons.vue` - Card with primary and secondary buttons
 
----
 ## Accessibility
 - Always provide `alt` text for images for screen readers.
 - Button text should be descriptive of the action.
 - Label clicks are keyboard accessible through the underlying `TvLabel` component.
 - Color contrast should be considered when using custom colors.
 
----
 ## SSR Notes
 - No direct DOM (`window` / `document`) access in source → safe for SSR.
 - Styles are automatically applied when you import the library.
@@ -325,7 +312,6 @@ Check out the demo files in `src/utils/demos/` for more examples:
 - Dependencies (`@todovue/tv-button` and `@todovue/tv-label`) are SSR-compatible.
 - Ensure you import `@todovue/tv-card/style.css` in an SSR-compatible entry if needed.
 
----
 ## Development
 ```bash
 git clone https://github.com/TODOvue/tv-card.git
@@ -336,14 +322,11 @@ npm run build   # build library
 ```
 Local demo served from Vite using `index.html` + `src/demo` examples.
 
----
 ## Contributing
 PRs and issues welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
 
----
 ## License
 MIT © TODOvue
 
----
 ### Attributions
 Crafted for the TODOvue component ecosystem
