@@ -4,6 +4,28 @@ All notable changes to `@todovue/tv-card` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.4] - 2026-01-27
+
+### Changed
+- Simplified the file list in `package.json` to include only essential assets.
+- Simplified the build configuration by removing demo-specific logic.
+- Enhanced GitHub Actions workflows to automate npm package publishing and GitHub release creation.
+- Moved the `@todovue/tv-demo` component import from main.js to `Demo.vue` to localize its usage.
+- Updated build commands to include `README.md` and `CHANGELOG.md` files in the public directory during the build process.
+
+### Added
+- Included the `src` directory in the `package.json` files list to ensure component source files are bundled in the package distribution.
+
+### Removed
+- Eliminated the global import of the `@todovue/tv-demo` component from `main.js`.
+
+### Dependencies
+- Updated `@todovue/tv-demo` to `^1.4.11`.
+- Updated `@todovue/tv-label` to `^1.2.3`.
+- Updated `@todovue/tv-button` to `^1.2.5`.
+- Updated `vue` to `^3.5.27`.
+- Updated `sass` to `^1.97.3`.
+
 ## [1.1.3] - 2026-01-21
 
 ### Removed
@@ -121,6 +143,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
     - `clickSecondaryButton` (on secondary button click)
     - `clickLabel` (on label click)
 
+[1.1.4]: https://github.com/TODOvue/todovue-card/pull/16/files
 [1.1.3]: https://github.com/TODOvue/todovue-card/pull/15/files
 [1.1.2]: https://github.com/TODOvue/todovue-card/pull/14/files
 [1.1.1]: https://github.com/TODOvue/todovue-card/pull/13/files
